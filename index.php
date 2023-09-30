@@ -11,6 +11,7 @@ function bot($method,$datas=[]){
     curl_setop($ch,CURLOPT_RETURNTRANSFER,true);
     curl_setopt($ch,CURLOPT_POSTFIELDS,$datas);
     $res = curl_exec($ch);
+	$num1 = 5;
     if(curl_error($ch)){{
         var_dump(curl_error($ch));
     }else{

@@ -18,7 +18,6 @@ function bot($method,$datas=[]){
         return json_decode($res);
     }
 }
-//===================//
 $update = json_decode(file_get_contents("php://input"));
 $message = $update->message;
 $from_id = $update->message->from->id;

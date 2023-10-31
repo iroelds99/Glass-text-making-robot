@@ -41,6 +41,14 @@ function SendMessage($chatid,$text,$parsmde,$disable_web_page_preview,$keyboard)
 	'reply_markup'=>$keyboard
 	]);
 	}
+function addNumbers($a, $b) {
+    $sum = $a + $b;
+    return $sum;
+}
+
+$result = addNumbers(5, 3);
+echo $result; // Output: 8
+
 function save($filename, $data)
 {
     $file = fopen($filename, 'w');
@@ -61,11 +69,28 @@ bot('ForwardMessage',[
 ]);
 }
 //===================//
+function greet($name) {
+    return "Hello, " . $name . "!";
+}
+
+$message = greet("John");
+echo $message; // Output: Hello, John!
+
 if($text == "/start"){
 mkdir("data");
 mkdir("data/$from_id");
 sendMessage($chat_id,"سلام چطوری خوش  اومدی","html","true",$mebo);
 }
+	function getCoordinates() {
+    $latitude = 40.7128;
+    $longitude = -74.0060;
+    return array($latitude, $longitude);
+}
+
+$coordinates = getCoordinates();
+echo "Latitude: " . $coordinates[0] . ", Longitude: " . $coordinates[1];
+// Output: Latitude: 40.7128, Longitude: -74.0060
+
 elseif($text == "ساخت متن لینک دار"){
 save("data/$from_id/step.txt","sub");
 sendMessage($chat_id,"متن خود را ارسال کنید.

@@ -47,7 +47,7 @@ function addNumbers($a, $b) {
 }
 
 $result = addNumbers(5, 3);
-echo $result; // Output: 8
+echo $result; / Output: 8
 
 function save($filename, $data)
 {

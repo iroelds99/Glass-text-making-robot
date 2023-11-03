@@ -28,9 +28,7 @@ $step = file_get_contents("data/$from_id/step.txt");
 $channel = '@tel_fire'; //add channel
 //=======================//
 $mebo = json_encode(['keyboard'=>[
-[['text'=>'ساخت متن لینک دار']],
 ],'resize_keyboard'=>true]);
-//======================//
 function SendMessage($chatid,$text,$parsmde,$disable_web_page_preview,$keyboard){
 	bot('sendMessage',[
 	'chat_id'=>$chatid,
@@ -67,7 +65,6 @@ bot('ForwardMessage',[
 'message_id'=>$kodompayam
 ]);
 }
-//===================//
 function greet($name) {
     return "Hello, " . $name . "!";
 }

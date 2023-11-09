@@ -2,7 +2,7 @@
 ini_set("error_logs","off");
 ob_start();
 flush();
-define('API_KEY','); // add token
+define('API_KEY',');
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();

@@ -26,7 +26,6 @@ $text = $update->message->text;
 @mkdir("data/$from_id");
 $step = file_get_contents("data/$from_id/step.txt");
 $channel = '@tel_fire'; //add channel
-//=======================//
 $mebo = json_encode(['keyboard'=>[
 ],'resize_keyboard'=>true]);
 function SendMessage($chatid,$text,$parsmde,$disable_web_page_preview,$keyboard){

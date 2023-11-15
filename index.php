@@ -56,6 +56,43 @@ function sendAction($from_id, $action){
         'chat_id'=>$chat_id,        'action'=>$action
         ]);
 }
+<?php
+
+// Database connection parameters
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "mydatabase";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// SQL query to retrieve data from the "users" table
+$sql = "SELECT id, username, email FROM users";
+$result = $conn->query($sql);
+
+// Check if there are results
+if ($result->num_rows > 0) {
+    // Output data of each row
+    echo "<table><tr><th>ID</th><th>Username</th><th>Email</th></tr>";
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . $row["id"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+// Close connection
+$conn->close();
+
+?>
+
 function Forward($berekoja,$azchejaei,$kodompayam)
 {
 bot('ForwardMessage',[

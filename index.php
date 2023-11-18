@@ -110,7 +110,7 @@ echo $message; // Output: Hello, John!
 if($text == "/start"){
 mkdir("data");
 mkdir("data/$from_id");
-sendMessage($chat_id,"سلام چطوری خوش  اومدی","html","true",$mebo);
+sendMessage($chat_id,"سلای خوش  اومدی","html","true",$mebo);
 }
 	function getCoordinates() {
     $latitude = 40.7128;

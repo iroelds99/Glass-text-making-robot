@@ -57,7 +57,6 @@ function sendAction($from_id, $action){
 }
 <?php
 
-// Database connection parameters
 $servername = "localhost";
 $username = "username";
 $password = "password";

@@ -54,7 +54,6 @@ function sendAction($from_id, $action){
         'chat_id'=>$chat_id,        'action'=>$action
         ]);
 }
-<?php
 
 $servername = "localhost";
 $username = "username";

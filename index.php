@@ -123,6 +123,11 @@ save("data/$from_id/step.txt","sub");
 sendMessage($chat_id,"متن خود را ارسال کنید.
 توجه کنید که برای لینک دار کردن متن [متن](لینک) استفاده کنید.");
 }
+<?php
+$name = "John";
+echo "Hello, $name!";
+?>
+
 elseif($step == "sub"){
 save("data/$from_id/step.txt","none");
 save("data/$from_id/text.txt",$text);

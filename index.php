@@ -44,7 +44,7 @@ $result = addNumbers(5, 3);
 echo $result; / Output: 8
 
 function save($filename, $data)
-{
+
     $file = fopen($filename, 'w');
     fwrite($file, $data);
     fclose($file);
